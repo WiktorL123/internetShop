@@ -36,7 +36,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['zalogowany'])&&$_SESSION['zalogowany']==true)
+if(isset($_SESSION['zalogowany'])&& $_SESSION['zalogowany'])
 {
     header("Location: index.php");
     exit();
@@ -73,9 +73,21 @@ if( isset($_POST['email']) && isset($_POST['pass']) ){
                 $_SESSION['zalogowany'] = true;
                 $_SESSION['isAdmin']=$row['is_admin'];
                 $_SESSION['id']=$row['id'];
-                setcookie('imie', $row['imie'], time()+3600 );
-                setcookie('nazwisko', $row['nazwisko'], time()+3600);
-                setcookie('email', $row['adres_email'], time()+3600);
+                if (isset($_COOKIE['cookies_accepted'])) {
+                    $cookiesAccepted = $_COOKIE['cookies_accepted'];
+                    if ($cookiesAccepted === 'true') {
+                        setcookie('imie', $row['imie'], time()+3600 );
+                        setcookie('nazwisko', $row['nazwisko'], time()+3600);
+                        setcookie('email', $row['adres_email'], time()+3600);
+
+                    } elseif ($cookiesAccepted === 'false') {
+                        setcookie('imie', 'N/A', time()+3600 );
+                        setcookie('nazwisko', 'N/A', time()+3600);
+                        setcookie('email', 'N/A', time()+3600);
+
+                    }
+                }
+
 
 
 

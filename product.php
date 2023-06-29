@@ -187,8 +187,6 @@ function showOpinions($id){
 if (isset($_GET['id']))
 {
     $productId = $_GET['id'];
-    $kategoria=$_SESSION['kategoria'];
-    echo $kategoria;
 
 echo "<div class='mainProdukt'>";
     displayProduct($productId);
@@ -197,7 +195,7 @@ echo "<div class='mainProdukt'>";
 
     echo "</div>";
     echo "<h2>Zobacz inne produkty z tej kategorii</h2>";
-    displaySimilarProduct($kategoria);
+    displaySimilarProduct($_SESSION['kategoria']);
     echo "<br>";
 
 //    echo $_SESSION['id'];
@@ -249,6 +247,9 @@ echo "<div class='mainProdukt'>";
     img{
         width: 100px;
         height: 100px;
+    }
+    body{
+        background-image: url("ZASOBY/v748-toon-103.jpg");
     }
 </style>
 </head>

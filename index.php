@@ -24,7 +24,7 @@ session_start()
 <!---->
 <!--    </script>-->
 </head>
-<body>
+<body onload="checkCookiesAccepted()">
 <div id="container">
 <header>
     <div id="logo">
@@ -210,6 +210,54 @@ session_start()
 
     <footer>Komputex.com © s27439 wszystkie prawa zastrzeżone</footer>
 </div>
+
+<script>
+    function setCookie(name, value, expiryDays) {
+        const date = new Date();
+        date.setTime(date.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function acceptCookies() {
+        setCookie("cookies_accepted", "true", 1);
+        location.reload();
+    }
+
+    function declineCookies() {
+        setCookie("cookies_accepted", "false", 1);
+        location.reload();
+    }
+
+    function checkCookiesAccepted() {
+        const cookiesAccepted = getCookie("cookies_accepted");
+        if (cookiesAccepted === "") {
+            const confirmation = confirm("Ta strona używa plików cookie. Czy zgadzasz się na ich użycie?");
+            if (confirmation) {
+                acceptCookies();
+            } else {
+                declineCookies();
+            }
+        }
+    }
+
+    function getCookie(name) {
+        const cookieName = name + "=";
+        const cookieArray = document.cookie.split(';');
+        for (let i = 0; i < cookieArray.length; i++) {
+            let cookie = cookieArray[i];
+            while (cookie.charAt(0) === ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(cookieName) === 0) {
+                return cookie.substring(cookieName.length, cookie.length);
+            }
+        }
+        return "";
+    }
+   checkCookiesAccepted();
+
+</script>
 </body>
 </html>
 
