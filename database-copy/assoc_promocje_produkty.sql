@@ -1,0 +1,10 @@
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (2, 4);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (2, 7);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (10, 5);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (11, 7);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (12, 2);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (13, 4);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (14, 1);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (16, 1);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (17, 1);
+INSERT INTO s27439.assoc_promocje_produkty (produkty_id_produktu, promocje_id_promocji) VALUES (19, 6);
