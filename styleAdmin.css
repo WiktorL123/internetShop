@@ -1,0 +1,102 @@
+body{
+    background-image: url("ZASOBY/v748-toon-103.jpg");
+    margin: 0;
+}
+#container {
+    height: 1000px;
+
+    background-image: url("ZASOBY/v748-toon-103.jpg");
+    margin: 0;
+
+}
+header{
+    background-image: url("ZASOBY/v748-toon-103.jpg");
+    height: 10%;
+    margin: 0;
+}
+#logo{
+    height: 50%;
+}
+#menu{
+    height: 50%;
+    background-image: url("ZASOBY/v748-toon-103.jpg");
+    text-align: center;
+
+}
+
+#main{
+    width: 100%;
+    height: 85%;
+    background-image: url("ZASOBY/v748-toon-103.jpg");
+    float: left;
+
+}
+#main h2{
+    text-align: center;
+}
+footer{
+    clear: both;
+    background-color: coral;
+    height: 5%;
+    width: 100%;
+}
+
+
+img:hover{
+    transform: scale(1.2);
+}
+
+#produkty{
+    margin-top: 25%;
+}
+.price{
+    width: 50px;
+}
+.option{
+    width: 280px;
+    float: left;
+    margin: 2px;
+}
+#logowanie{
+    text-align: center;
+    width: 100px;
+    float: right;
+    background-color: yellowgreen;
+    color: white;
+    transition: all 0.2s
+}
+#rejestracja{
+    text-align: center;
+    width: 100px;
+    float: right;
+    background-color: red;
+    color: white;
+    transition: all 0.3s
+}
+#logowanie:hover{
+    background-color: yellowgreen;
+    transform: translate(0px, -18px);
+
+
+}#rejestracja:hover{
+     background-color: red;
+     color: white;
+     transform: translate(0px, -18px);
+
+
+ }
+
+#logout{
+    text-align: center;
+    width: 100px;
+    float: right;
+    background-color: crimson;
+    color: white;
+    transition: all 0.3s
+}
+#logout:hover{
+    background-color: crimson;
+    color: white;
+    transform: translate(0px, -18px);
+
+}

@@ -1,0 +1,134 @@
+body{
+    background-color: lightblue;
+    margin: 0;
+}
+#container {
+    height: 1000px;
+    
+    background-color: aqua;
+    margin: 0;
+
+}
+header{
+    background-color: blue;
+    height: 10%;
+    margin: 0;
+}
+#logo{
+    height: 50%;
+}
+#menu{
+    height: 50%;
+    background-color: green;
+    text-align: center;
+
+}
+#filter{
+    width: 20%;
+    height: 85%;
+    background-color: yellow;
+    float: left;
+}
+#main{
+    width: 80%;
+    height: 85%;
+    background-color: yellowgreen;
+    float: left;
+
+}
+#main h2{
+    text-align: center;
+}
+footer{
+    clear: both;
+    background-color: coral;
+    height: 5%;
+    width: 100%;
+}
+.produkt{
+    width: 25%;
+    height: 50%;
+    transition: transform 0.2s ease-in-out;
+    position: center;
+    float: left;
+
+}
+.produkt:hover{
+    transform: rotate3d(45, 45, 45, 45deg);
+
+}
+.img{
+    height: 50%;
+    width: 50%;
+}
+img{
+    height: 50%;
+    width: 50%;
+    transition: transform 0.2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+img:hover{
+    transform: scale(1.2);
+}
+.option{
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+#produkty{
+    margin-top: 25%;
+}
+.price{
+    width: 50px;
+}
+.option{
+    width: 280px;
+    float: left;
+    margin: 2px;
+}
+#logowanie{
+    text-align: center;
+    width: 100px;
+    float: right;
+    background-color: yellowgreen;
+    color: white;
+    transition: all 0.2s
+}
+#rejestracja{
+    text-align: center;
+    width: 100px;
+    float: right;
+    background-color: red;
+    color: white;
+    transition: all 0.3s
+}
+#logowanie:hover{
+    background-color: yellowgreen;
+    transform: translate(0px, -18px);
+
+
+}#rejestracja:hover{
+     background-color: red;
+     color: white;
+     transform: translate(0px, -18px);
+
+
+ }
+#szukaj{
+    border-radius:100px ;
+}
+#logout{
+    text-align: center;
+    width: 100px;
+    float: right;
+    background-color: crimson;
+    color: white;
+    transition: all 0.3s
+}
+#logout:hover{
+    background-color: crimson;
+    color: white;
+    transform: translate(0px, -18px);
+
+}
