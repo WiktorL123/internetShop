@@ -69,7 +69,6 @@ if( isset($_POST['email']) && isset($_POST['pass']) ){
 
 
             if(password_verify($_POST['pass'], $row['password'])) {
-                echo "jestem w 2 if";
                 $_SESSION['email'] = $_POST['email'];
                 $_SESSION['zalogowany'] = true;
                 $_SESSION['isAdmin']=$row['is_admin'];

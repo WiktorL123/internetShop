@@ -97,10 +97,10 @@ session_start()
 
             echo '<div id="produkty">';
 //        var_dump($_POST);
-            $host="szuflandia";
-            $db_name="s27439";
-            $user="s27439";
-            $pass="Wik.Lema";
+            $host = "localhost";
+            $db_name = "sklep";
+            $user = "root";
+            $pass = "";
             try {
                 $con = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
                 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -112,7 +112,7 @@ session_start()
             if (!isset($_POST['cenado']) || !isset($_POST['cenaod']) || !isset($_POST['nazwa'])) {
 
                 try {
-                    $query = " SELECT id_produktu, nazwa,  ocena, zdjecie, cena FROM produkty
+                    $query = " SELECT * FROM produkty
                                 INNER JOIN oceny ON oceny.produkty_id_produktu=produkty.id_produktu
                                 ORDER BY RAND() LIMIT 4";
                     $stmt = $con->query($query);
@@ -120,6 +120,7 @@ session_start()
 
                     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($results as $row) {
+
                         $imageData = $row['zdjecie'];
                         $produktid = $row['id_produktu'];
                         echo "<a href='product.php?id=$produktid'>" .

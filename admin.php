@@ -80,9 +80,10 @@ session_start()
         }
         function deleteCategory($id)
         {
-            $db_name="s27439";
-            $user="s27439";
-            $pass="Wik.Lema";
+            $host="localhost";
+            $db_name="sklep";
+            $user="root";
+            $pass="";
             try {
                 $db = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -106,9 +107,10 @@ session_start()
 
 
         function deleteProduct($id){
-           $db_name="s27439";
-            $user="s27439";
-            $pass="Wik.Lema";
+            $host="localhost";
+            $db_name="sklep";
+            $user="root";
+            $pass="";
             try {
                 $db = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -169,10 +171,10 @@ session_start()
         }
         function displayCategories()
         {
-             $host="szuflandia";
-            $db_name="s27439";
-            $user="Wik.Lema";
-            $pass="s27439";
+            $host="localhost";
+            $db_name="sklep";
+            $user="root";
+            $pass="";
             try {
                 $db = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -201,10 +203,10 @@ session_start()
             }
         }
         function dodajSztuke($id, $ilosc){
-             $host="szuflandia";
-            $db_name="s27439";
-            $user="Wik.Lema";
-            $pass="s27439";
+            $host="localhost";
+            $db_name="sklep";
+            $user="root";
+            $pass="";
             try {
                 $db = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -229,9 +231,10 @@ session_start()
 
 
             try {
-              $db_name="s27439";
-            $user="s27439";
-            $pass="Wik.Lema";
+                $host="localhost";
+                $db_name="sklep";
+                $user="root";
+                $pass="";
                 $db = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -252,9 +255,10 @@ session_start()
         function addProduct($nazwa, $opis, $cena, $ilosc, $kategoriaProdukt, $zdjecie )
         {
             try {
-               $db_name="s27439";
-            $user="s27439";
-            $pass="Wik.Lema";
+                $host="localhost";
+                $db_name="sklep";
+                $user="root";
+                $pass="";
                 $db = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
